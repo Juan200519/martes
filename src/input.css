@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+@layer utilities {
+  .hover-scale {
+    @apply transform transition-all duration-300 hover:scale-105;
+  }
+  
+  .fade-in {
+    @apply opacity-0 animate-[fadeIn_0.5s_ease-in_forwards];
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 1s ease-out 0.5s both;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply scroll-pt-16; 
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+
+@layer components {
+ 
+  .nav-link {
+    @apply text-gray-600 hover:text-pink-500 transition-colors duration-300 relative
+           after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+           after:bg-pink-500 after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .nav-link-mobile {
+    @apply block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-pink-50
+           transition-all duration-300 rounded-lg;
+  }
+
+  
+  .group:hover .nav-link {
+    @apply text-pink-500;
+  }
+
+  .mobile-accordion button {
+    @apply w-full flex justify-between items-center py-2 px-4
+           text-gray-600 hover:text-pink-500 hover:bg-pink-50
+           transition-all duration-300;
+  }
+
+  .mobile-accordion .hidden {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-pink-500 text-white font-medium rounded-full
+           transform transition-all duration-300
+           hover:bg-pink-600 hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-8 py-3 bg-transparent text-white font-medium rounded-full
+           border-2 border-white transform transition-all duration-300
+           hover:bg-white hover:text-pink-500 hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50
+           active:scale-95;
+  }
+
+  
+  .category-btn {
+    @apply px-6 py-2 text-gray-600 rounded-full border border-transparent
+           hover:text-pink-500 hover:border-pink-500 transition-all duration-300;
+  }
+
+  .category-btn.active {
+    @apply text-pink-500 border-pink-500 bg-pink-50;
+  }
+
+  #menu-btn.active .menu-open {
+    @apply hidden;
+  }
+
+  #menu-btn.active .menu-close {
+    @apply block;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-pink-500 transition-colors duration-300 relative
+           after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+           after:bg-pink-500 after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .nav-link-mobile {
+    @apply block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-pink-50
+           transition-all duration-300 rounded-lg;
+  }
+
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-pink-500 text-white font-medium rounded-full
+           transform transition-all duration-300
+           hover:bg-pink-600 hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-8 py-3 bg-transparent text-white font-medium rounded-full
+           border-2 border-white transform transition-all duration-300
+           hover:bg-white hover:text-pink-500 hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50
+           active:scale-95;
+  }
+
+  .category-btn {
+    @apply px-6 py-2 text-gray-600 rounded-full border border-transparent
+           hover:text-pink-500 hover:border-pink-500 transition-all duration-300;
+  }
+
+  .category-btn.active {
+    @apply text-pink-500 border-pink-500 bg-pink-50;
+  }
+
+  .product-card {
+    @apply transition-all duration-300 ease-in-out opacity-100 transform translate-y-0;
+  }
+
+  .product-card.hidden {
+    @apply opacity-0 translate-y-4;
+  }
+}
+
+
+@layer components {
+  .input-field {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm 
+           focus:border-pink-500 focus:ring-pink-500 transition-colors duration-300;
+  }
+}
+
+
+#menuBtn.active .menu-open {
+  @apply hidden;
+}
+
+#menuBtn.active .menu-close {
+  @apply block;
+}
+
+
+#mobileMenu {
+  @apply transition-all duration-300 ease-in-out transform;
+}
+
+#mobileMenu.hidden {
+  @apply opacity-0 -translate-y-2;
+}
+
+#mobileMenu:not(.hidden) {
+  @apply opacity-100 translate-y-0;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}

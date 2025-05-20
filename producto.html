@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto - Laura Perdomo Boutique</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-pink-600 hover:text-pink-700 transition-colors">Laura Perdomo</a>
+                </div>
+
+                
+                <div class="flex md:hidden">
+                    <button id="menuBtn" class="text-gray-700 hover:text-pink-600 focus:outline-none focus:text-pink-600">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+
+               
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html#inicio" class="text-gray-700 hover:text-pink-600 transition-colors duration-300">Inicio</a>
+                        <a href="index.html#coleccion" class="text-gray-700 hover:text-pink-600 transition-colors duration-300">Colección</a>
+                        <a href="index.html#nosotros" class="text-gray-700 hover:text-pink-600 transition-colors duration-300">Nosotros</a>
+                        <a href="index.html#contacto" class="text-gray-700 hover:text-pink-600 transition-colors duration-300">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg px-4 py-4 space-y-2">
+        <a href="index.html#inicio" class="block nav-link-mobile text-gray-700 hover:text-pink-600">Inicio</a>
+        <a href="index.html#coleccion" class="block nav-link-mobile text-gray-700 hover:text-pink-600">Colección</a>
+        <a href="index.html#nosotros" class="block nav-link-mobile text-gray-700 hover:text-pink-600">Nosotros</a>
+        <a href="index.html#contacto" class="block nav-link-mobile text-gray-700 hover:text-pink-600">Contacto</a>
+    </div>
+
+    
+    <div class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start">
+              
+                <div class="flex flex-col">
+                    <div class="relative">
+                        <div class="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden hover:opacity-75 transition-opacity duration-300">
+                            <img src="" alt="" id="mainImage" class="w-full h-full object-center object-cover">
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
+                    <h1 id="productTitle" class="text-3xl font-extrabold tracking-tight text-gray-900"></h1>
+                    <div class="mt-3">
+                        <p id="productPrice" class="text-3xl text-gray-900 font-serif"></p>
+                    </div>
+
+                    <div class="mt-6">
+                        <div class="text-base text-gray-700 space-y-6">
+                            <p id="productDescription" class="italic"></p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h2 class="text-sm font-medium text-gray-900">Talla</h2>
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <button class="group border rounded-md py-3 px-4 flex justify-center text-sm font-medium bg-white shadow-sm text-gray-900 cursor-pointer">S</button>
+                            <button class="group border rounded-md py-3 px-4 flex justify-center text-sm font-medium bg-white shadow-sm text-gray-900 cursor-pointer">M</button>
+                            <button class="group border rounded-md py-3 px-4 flex justify-center text-sm font-medium bg-white shadow-sm text-gray-900 cursor-pointer">L</button>
+                            <button class="group border rounded-md py-3 px-4 flex justify-center text-sm font-medium bg-white shadow-sm text-gray-900 cursor-pointer">XL</button>
+                        </div>
+
+                        <div class="mt-10">
+                            <button type="submit" class="w-full bg-pink-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transform transition hover:scale-105">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                Añadir al carrito
+                            </button>
+                        </div>
+
+                        <div class="mt-6 space-y-2 text-sm text-gray-500">
+                            <div class="flex items-center"><i class="fas fa-truck mr-2"></i>Envío gratis en compras superiores a $300.000</div>
+                            <div class="flex items-center"><i class="fas fa-undo mr-2"></i>Devoluciones gratuitas hasta 30 días</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        const products = {      
+              'modern': {
+                title: 'Crop Top Moderno',
+                price: '$49.900',
+                image: 'https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda',
+                description: 'Un crop top moderno es una prenda contemporánea que se caracteriza por su diseño corto, revelando una parte del abdomen o la cintura. Su enfoque está en la estética actual, fusionando tendencias de moda con versatilidad...'
+            },
+                          'noviono': {
+                title: 'BoyFriend Jean',
+                price: '$99.900',
+                image: 'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec',
+                description: 'Los Boyfriend Jeans son un estilo de pantalón vaquero conocido por su ajuste holgado y relajado, que da la impresión de que te los has "tomado prestados" de tu novio. Su principal característica es la comodidad y un aire casual y desenfadado, en contraste con los jeans más ajustados o estructurados...'
+            },
+                          'elegantini': {
+                title: 'Vestido Elegante',
+                price: '$159.900',
+                image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03',
+                description: 'Un hermoso vestido elegante perfecto para ocasiones especiales...'
+            },
+                          'collarcini': {
+                title: 'Collar Elegante',
+                price: '$45.900',
+                image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f',
+                description: 'Un collar elegante es una joya sofisticada que realza el cuello, destacando por su diseño refinado, materiales de calidad y la capacidad de añadir un toque de distinción y glamour a cualquier atuendo...'
+            },
+            'caperucita': {
+                title: 'Vestido Casual Rojo',
+                price: '$129.000',
+                image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8',
+                description: 'vestido casual rojo es una prenda vibrante y versátil, perfecta para añadir un toque de color y alegría a cualquier guardarropa diario. Se caracteriza por su diseño relajado y cómodo, ideal para diversas ocasiones informales, sin sacrificar el estilo...'
+            },
+             'moms': {
+                title: 'Mom Jeans',
+                price: '$89.900',
+                image: 'https://images.unsplash.com/photo-1475178626620-a4d074967452',
+                description: 'Son ideales para crear looks casuales y desenfadados, combinando bien con tops cortos (crop tops), camisetas metidas por dentro, sudaderas y una gran variedad de calzado, desde zapatillas deportivas hasta botines...'
+            },
+                'skiny': {
+                title: 'Skinny Jeans',
+                price: '$79.900',
+                image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246',
+                description: 'Son una prenda versátil que se puede combinar con una gran variedad de tops, calzado y estilos, desde looks casuales hasta más arreglados...'
+            },
+                        'mangacorta': {
+                title: 'Camisa Manga Larga Azul',
+                price: '$100.000',
+                image: 'https://images.unsplash.com/photo-1604695573706-53170668f6a6',
+                description: 'Una elegante camisa azul para aquellas ocasiones...'
+            },
+            'blusa': {
+                title: 'Blusa Casual',
+                price: '$159.000',
+                image: 'https://images.unsplash.com/photo-1551048632-24e444b48a3e',
+                description: 'Blusa casual perfecta para el día a día...'
+            },
+            'pantalon': {
+                title: 'Pantalón de Diseñador',
+                price: '$249.000',
+                image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956',
+                description: 'Pantalón con un corte moderno y elegante...'
+            }
+        };
+
+        if (productId && products[productId]) {
+            const product = products[productId];
+            document.getElementById('productTitle').textContent = product.title;
+            document.getElementById('productPrice').textContent = product.price;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('mainImage').src = product.image;
+            document.getElementById('mainImage').alt = product.title;
+            document.title = `${product.title} - Laura Perdomo Boutique`;
+        }
+
+        
+        document.querySelector('button[type="submit"]').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-check mr-2"></i>Añadido al carrito';
+            this.classList.add('bg-green-600', 'hover:bg-green-700');
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-shopping-cart mr-2"></i>Añadir al carrito';
+                this.classList.remove('bg-green-600', 'hover:bg-green-700');
+            }, 2000);
+        });
+    </script>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

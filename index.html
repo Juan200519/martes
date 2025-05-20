@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Perdomo Boutique</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="font-poppins bg-gray-50">
+    
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="./img/Logo Laura.png" alt="Laura Perdomo Logo" class="w-16 h-16">
+                    <span class="text-2xl font-bold text-pink-500">Laura Perdomo</span>
+                </a>
+                
+                <button id="menuBtn" class="lg:hidden text-gray-600 hover:text-pink-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="menu-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path class="menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    
+                
+                    <div class="relative group">
+                        <button class="nav-link flex items-center" data-category="jeans">
+                            Jeans
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="skinny">Skinny</a>
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="mom">Mom Jeans</a>
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="boyfriend">Boyfriend</a>
+                        </div>
+                    </div>
+
+                 
+                    <div class="relative group">
+                        <button class="nav-link flex items-center" data-category="vestidos">
+                            Vestidos
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="casual">Casual</a>
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="elegante">Elegante</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="relative group">
+                        <button class="nav-link flex items-center" data-category="blusas">
+                            Blusas
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="manga-larga">Manga Larga</a>
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="crop-tops">Crop Tops</a>
+                            
+                        </div>
+                    </div>
+
+                   
+                    <div class="relative group">
+                        <button class="nav-link flex items-center" data-category="accesorios">
+                            Accesorios
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#productos" class="block px-4 py-2 text-gray-600 hover:text-pink-500 hover:bg-gray-50" data-subcategory="collares">Collares</a>
+                         
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="nav-link">Contacto</a>
+
+
+<div class="flex items-center space-x-4 ml-4 text-pink-500">
+    <a href="https://api.whatsapp.com/send/?phone=573104802350&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKY2s5leHRuA2FlbQIxMAABpxKL70o3czOWATtY_cT8ULzwfsGmQJgToVU4gBpzflbd14_zqq4nKv6t0TYN_aem_6EHL7uQhkVpQ-_TFARyPQA" target="_blank" aria-label="WhatsApp" class="hover:text-pink-600 transition-colors">
+        <i class="fab fa-whatsapp fa-lg"></i>
+    </a>
+    <a href="https://www.instagram.com/laurapc_1?igsh=MQ==" target="_blank" aria-label="Instagram" class="hover:text-pink-600 transition-colors">
+        <i class="fab fa-instagram fa-lg"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1AinT2aFWK/" target="_blank" aria-label="Facebook" class="hover:text-pink-600 transition-colors">
+        <i class="fab fa-facebook fa-lg"></i>
+    </a>
+</div>
+
+                </div>
+            </div>
+
+           
+            <div id="mobileMenu" class="lg:hidden hidden">
+                <div class="py-4">
+                    <a href="#inicio" class="nav-link-mobile">Inicio</a>
+                    
+                   
+                    <div class="mobile-accordion">
+                        <button class="w-full flex justify-between items-center nav-link-mobile">
+                            <span>Jeans</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pl-4">
+                            <a href="#skinny" class="nav-link-mobile">Skinny</a>
+                            <a href="#mom" class="nav-link-mobile">Mom Jeans</a>
+                            <a href="#boyfriend" class="nav-link-mobile">Boyfriend</a>
+                            <a href="#acampanados" class="nav-link-mobile">Acampanados</a>
+                        </div>
+                    </div>
+
+                  
+                    <div class="mobile-accordion">
+                        <button class="w-full flex justify-between items-center nav-link-mobile">
+                            <span>Vestidos</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pl-4">
+                            <a href="#casual" class="nav-link-mobile">Casual</a>
+                            <a href="#elegante" class="nav-link-mobile">Elegante</a>
+                            <a href="#fiesta" class="nav-link-mobile">Fiesta</a>
+                            <a href="#playa" class="nav-link-mobile">Playa</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mobile-accordion">
+                        <button class="w-full flex justify-between items-center nav-link-mobile">
+                            <span>Blusas</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pl-4">
+                            <a href="#manga-corta" class="nav-link-mobile">Manga Corta</a>
+                            <a href="#manga-larga" class="nav-link-mobile">Manga Larga</a>
+                            <a href="#crop-tops" class="nav-link-mobile">Crop Tops</a>
+                            <a href="#camisetas" class="nav-link-mobile">Camisetas</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mobile-accordion">
+                        <button class="w-full flex justify-between items-center nav-link-mobile">
+                            <span>Accesorios</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pl-4">
+                            <a href="#collares" class="nav-link-mobile">Collares</a>
+                            <a href="#aretes" class="nav-link-mobile">Aretes</a>
+                            <a href="#bolsos" class="nav-link-mobile">Bolsos</a>
+                            <a href="#cinturones" class="nav-link-mobile">Cinturones</a>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="nav-link-mobile">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div id="tsparticles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
+
+    
+    <section id="inicio" class="relative h-screen pt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80" alt="Hero Image"
+                class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
+            <div class="space-y-6 p-4" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold font-playfair">Elegancia en Cada Detalle</h1>
+                <p class="text-xl md:text-2xl max-w-2xl mx-auto">Descubre nuestra exclusiva colección de moda</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#coleccion" class="btn-primary">Ver Colección</a>
+                    <a href="#contacto" class="btn-secondary">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="coleccion" class="py-20 bg-white">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Nuestra Colección</h2>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="coleccion-item group" data-aos="fade-up">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Jean Skinny" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-25 transition-all duration-500"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Skinny Jeans</h3>
+                    <p class="text-gray-600">$79.900</p>
+                </div>
+
+                <div class="coleccion-item group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09" alt="Jean Mom" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-25 transition-all duration-500"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Mom Jeans</h3>
+                    <p class="text-gray-600">$89.900</p>
+                </div>
+
+                
+                <div class="coleccion-item group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://images.unsplash.com/photo-1551048632-24e444b48a3e" alt="Blusa Casual" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-25 transition-all duration-500"></div>
+
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Crop Top Blanco</h3>
+                    <p class="text-gray-600">$60.900</p>
+                </div>
+
+                <div class="coleccion-item group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://images.unsplash.com/photo-1604695573706-53170668f6a6" alt="Blusa Elegante" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-25 transition-all duration-500"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Camisa Manga Larga</h3>
+                    <p class="text-gray-600">$59.900</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="productos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Nuestros Productos</h2>
+            
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="200">
+                
+                <div class="product-card" data-category="jeans" data-aos="fade-up">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Skinny Jeans" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                           <button onclick="verDetalles('skiny')" class="btn-primary">Ver Detalles</button>
+
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Skinny Jeans</h3>
+                    <p class="text-gray-600">$79.900</p>
+                </div>
+
+                <div class="product-card" data-category="jeans" data-aos="fade-up">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1475178626620-a4d074967452" alt="Mom Jeans" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('moms')" class="btn-primary">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Mom Jeans</h3>
+                    <p class="text-gray-600">$89.900</p>
+                </div>
+
+               
+                <div class="product-card" data-category="vestidos" data-aos="fade-up">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8" alt="Vestido Casual" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('caperucita')" class="btn-primary">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Vestido Casual</h3>
+                    <p class="text-gray-600">$129.900</p>
+                </div>
+
+               
+                <div class="product-card" data-category="blusas" data-aos="fade-up">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1604695573706-53170668f6a6" alt="Blusa Manga Corta" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('mangacorta')" class="btn-primary">Ver Detalles</button>
+
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Camisa Manga Larga</h3>
+                    <p class="text-gray-600">$59.900</p>
+                </div>
+
+              
+                <div class="product-card" data-category="accesorios" data-aos="fade-up">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f" alt="Collar" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('collarcini')" class="btn-primary">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Collar Elegante</h3>
+                    <p class="text-gray-600">$45.900</p>
+                </div>
+
+                
+                <div class="product-card" data-category="vestidos" data-subcategory="elegante">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03" alt="Vestido Elegante" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('elegantini')" class="btn-primary">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Vestido Elegante</h3>
+                    <p class="text-gray-600">$159.900</p>
+                </div>
+
+                
+                <div class="product-card" data-category="blusas" data-subcategory="crop-tops">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda" alt="Crop Top" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('modern')" class="btn-primary">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Crop Top Moderno</h3>
+                    <p class="text-gray-600">$49.900</p>
+                </div>
+
+                
+                <div class="product-card" data-category="jeans" data-subcategory="boyfriend">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec" alt="Boyfriend Jeans" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button onclick="verDetalles('noviono')" class="btn-primary">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Boyfriend Jeans</h3>
+                    <p class="text-gray-600">$99.900</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg max-w-4xl w-full mx-4 overflow-hidden">
+            <div class="relative">
+                <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-6">
+                        <img id="modalImage" src="" alt="" class="w-full h-96 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+                        <p id="modalPrice" class="text-xl text-pink-500 font-semibold mb-4"></p>
+                        <p id="modalDescription" class="text-gray-600 mb-6"></p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <span class="text-gray-700">Tallas disponibles:</span>
+                                <div id="modalSizes" class="flex gap-2"></div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-gray-700">Colores:</span>
+                                <div id="modalColors" class="flex gap-2"></div>
+                            </div>
+                            <button class="btn-primary w-full">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <section id="nosotros" class="py-16 bg-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center fade-in">
+                <h2 class="text-3xl font-bold mb-8">Sobre Nosotros</h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto italic">
+                    "La moda desaparece, el estilo es eterno"
+                </p>
+                <p class="mt-4 max-w-3xl text-gray-500 lg:mx-auto">
+                    En <span class="font-serif text-pink-600">Laura Perdomo Boutique</span>, nos dedicamos a ofrecer las últimas tendencias en moda con un toque de elegancia y exclusividad. Cada pieza es cuidadosamente seleccionada para brindarte la mejor calidad y estilo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contacto" class="py-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-white opacity-50"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2 class="text-3xl font-bold text-center mb-12">Contáctanos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 transition-colors duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 transition-colors duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                        <textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 transition-colors duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-pink-600 text-white py-2 px-4 rounded-md hover:bg-pink-700 transition-all duration-300 transform hover:scale-105">Enviar Mensaje</button>
+                </form>
+            </div>
+            <div class="space-y-4 bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <h3 class="text-xl font-semibold">Información de Contacto</h3>
+                <p class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-pink-600"></i> Calle 4 #21 Iquira-Huila</p>
+                <p class="flex items-center"><i class="fas fa-phone w-6 text-pink-600"></i> +57 310 4802350</p>
+                <p class="flex items-center"><i class="fas fa-envelope w-6 text-pink-600"></i> laura.perdomo@gmail.com</p>
+                <div class="mt-8">
+                    <p class="text-gray-600 italic">"La elegancia es la única belleza que nunca desaparece"</p>
+                </div>
+            </div>
+        </div>
+
+   <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+    
+    <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.028245120681!2d-75.9805012!3d2.6856556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e24f7facc7bfb1b%3A0x3e2aef0979b3d44e!2sIquira%2C%20Huila!5e0!3m2!1ses-419!2sco!4v1716220000000!5m2!1ses-419!2sco" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+   
+    <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+        <img src="img/Logo Laura.png" 
+             alt="Boutique Laura" 
+             class="w-full h-full object-cover object-center">
+    </div>
+</div>
+
+
+
+<footer class="bg-gray-900 text-white pt-12 pb-6">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            
+            
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
+             <div class="flex justify-center md:justify-start gap-4 text-xl">
+  <a href="https://www.facebook.com/share/1AinT2aFWK/" class="p-4 border rounded-full hover:bg-pink-500 transition"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/laurapc_1?igsh=MWxhdG9yN3U5OGhwMQ==" class="p-4 border rounded-full hover:bg-pink-500 transition"><i class="fab fa-instagram"></i></a>
+  <a href="https://api.whatsapp.com/send/?phone=573104802350&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKY2s5leHRuA2FlbQIxMAABpxKL70o3czOWATtY_cT8ULzwfsGmQJgToVU4gBpzflbd14_zqq4nKv6t0TYN_aem_6EHL7uQhkVpQ-_TFARyPQA" class="p-4 border rounded-full hover:bg-pink-500 transition"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+            </div>
+
+            
+            <div>
+                <h3 class="text-2xl font-bold text-pink-500 font-playfair">Laura Perdomo</h3>
+                <p class="text-gray-400 italic mt-1">Boutique de Moda</p>
+                <p class="text-sm text-gray-500 mt-2">Donde la elegancia encuentra tu estilo.</p>
+            </div>
+
+           
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Contáctanos</h3>
+                <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2 text-pink-500"></i> Calle 4 #21, Iquira-Huila</p>
+                <p class="text-gray-400"><i class="fas fa-phone mr-2 text-pink-500"></i> +57 310 4802350</p>
+                <p class="text-gray-400"><i class="fas fa-envelope mr-2 text-pink-500"></i> laura.perdomo@gmail.com</p>
+            </div>
+        </div>
+
+        
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+            &copy; 2025 Laura Perdomo Boutique. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+
+
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+     
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Mensaje Enviado';
+            button.classList.add('bg-green-600', 'hover:bg-green-700');
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.classList.remove('bg-green-600', 'hover:bg-green-700');
+                form.reset();
+            }, 2000);
+        });
+
+        
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', function() {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        
+        const mobileAccordions = document.querySelectorAll('.mobile-accordion');
+
+        mobileAccordions.forEach(accordion => {
+            const button = accordion.querySelector('button');
+            const content = accordion.querySelector('.hidden');
+
+            button.addEventListener('click', function() {
+                content.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+<script>
+    function verDetalles(productId) {
+        window.location.href = `producto.html?id=${productId}`;
+    }
+</script>
+
+</html>
